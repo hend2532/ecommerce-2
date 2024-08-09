@@ -16,8 +16,6 @@ const Card = (props) => {
   let handleAddToCart=()=>{
     addToCart({name:props.name,price:props.price, category: props.category , quantity: count  });
     setAdd(false);
-    console.log(count)
-    
   }
   
   let increment=()=>{
@@ -36,11 +34,14 @@ const Card = (props) => {
       Add to Cart
      </button>
      </div>
-     : <div className='increment'>
-      <img onClick={decrement} src="./assets/images/icon-decrement-quantity.svg" alt="" />
-        {count}
-      <img onClick={increment} src="./assets/images/icon-increment-quantity.svg" alt="" />
-     </div>}
+     :
+    //   <div className='increment'>
+    //   <img onClick={decrement} src="./assets/images/icon-decrement-quantity.svg" alt="" />
+    //     {count}
+    //   <img onClick={increment} src="./assets/images/icon-increment-quantity.svg" alt="" />
+    //  </div>
+    null
+     }
    </div>
     <p className='cardCategory'> {props.category}</p>
     <h2 className='cardName'> {props.name}</h2>
